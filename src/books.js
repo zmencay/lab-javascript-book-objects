@@ -129,9 +129,24 @@ const dictionary = {
     ],
 };
 
-function booksByAuthor() {
-  // Your code here:
-  
+function booksByAuthor(dictionary) {
+  const result = [];
+
+  for (const author in dictionary) {
+    const books = dictionary[author];
+
+    books.forEach(function (book) {
+      const bookObject = {
+        title: book[0],
+        pages: book[1],
+        author: author
+      };
+
+      result.push(bookObject);
+    });
+  }
+
+  return result;
 }
 
 
