@@ -89,7 +89,9 @@ function getBookDetails(book) {
 
 // Iteration 3 | Delete Language
 // Your code here:
-
+booksArray.forEach(function (book) {
+  delete book.details.language;
+});
 
 
 
