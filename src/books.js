@@ -97,7 +97,12 @@ booksArray.forEach(function (book) {
 
 // Iteration 4 | Estimated Reading Time
 // Your code here:
+booksArray.forEach(function (book) {
+  const readingTime = (book.pages * 500) / 90;
+  book.readingTime = Math.ceil(readingTime);
+});
 
+console.log(booksArray);
 
 
 
